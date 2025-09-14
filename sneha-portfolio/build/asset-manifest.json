@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/static/css/main.8cf4d826.css",
+    "main.js": "/static/js/main.a102070a.js",
+    "static/js/453.622399f8.chunk.js": "/static/js/453.622399f8.chunk.js",
+    "static/media/image3.png": "/static/media/image3.cc04be2f105bd5412cf9.png",
+    "static/media/image1.png": "/static/media/image1.9cdf20edfb69b892fa88.png",
+    "static/media/BROGETTA-Regular.otf": "/static/media/BROGETTA-Regular.026e7b832e7b88d92151.otf",
+    "static/media/MADE Mirage Black PERSONAL USE.otf": "/static/media/MADE Mirage Black PERSONAL USE.c38c50ad8d7cca1d5967.otf",
+    "static/media/MADE Mirage Medium PERSONAL USE.otf": "/static/media/MADE Mirage Medium PERSONAL USE.c934e0ca0d1e70a594ad.otf",
+    "static/media/MADE Mirage Thin PERSONAL USE.otf": "/static/media/MADE Mirage Thin PERSONAL USE.853c4ae65d412a0f74ba.otf",
+    "static/media/MADE Mirage Regular PERSONAL USE.otf": "/static/media/MADE Mirage Regular PERSONAL USE.8b48864cc8b861311931.otf",
+    "static/media/MADE Mirage Bold PERSONAL USE.otf": "/static/media/MADE Mirage Bold PERSONAL USE.2fb1cb867ac816cd61c5.otf",
+    "index.html": "/index.html",
+    "main.8cf4d826.css.map": "/static/css/main.8cf4d826.css.map",
+    "main.a102070a.js.map": "/static/js/main.a102070a.js.map",
+    "453.622399f8.chunk.js.map": "/static/js/453.622399f8.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.8cf4d826.css",
+    "static/js/main.a102070a.js"
+  ]
+}
