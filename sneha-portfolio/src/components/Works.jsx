@@ -8,11 +8,11 @@ const Works = () => {
     {
       id: 1,
       title: "Firebase Chat App",
-      category: "FULL STACK • OPEN SOURCE",
+      category: "CHATBOT • OPEN SOURCE",
       year: "2025",
       description:
         "Real-time chat app with AI-based chatroom responses, profile management (bio, theme, profile image), chat history with Firestore, searchable dashboards, and persistent dark mode preferences.",
-      tags: ["React", "Firebase", "Firestore", "AI Chatroom"],
+      tags: ["React", "GenAI", "AI Chatroom"],
       image: "/images/firebase-chat-app.png",
       github: "https://github.com/Snehadas2005/firebase-chat-app",
     },
