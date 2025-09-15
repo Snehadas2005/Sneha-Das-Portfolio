@@ -192,7 +192,7 @@ const About = () => {
               className="text-lg lg:text-xl font-brogetta leading-relaxed text-gray-300 sm:mb-8"
             >
               I’m a{" "}
-              <span className="text-white font-bold">Frontend Developer</span>{" "}
+              <span className="text-white font-bold">Web Developer</span>{" "}
               and AI & Data Science student, passionate about crafting clean,
               responsive, and user-focused digital experiences.
             </motion.p>
