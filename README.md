@@ -423,10 +423,10 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 **Sneha** - Creative Designer & Developer
 
-- Website: [your-portfolio-domain.com](https://sneha-das-portfolio.vercel.app/)
+- Website: [https://sneha-das-portfolio.vercel.app/](https://sneha-das-portfolio.vercel.app/)
 - Email: sn2005eha26das@gmail.com
-- LinkedIn: [your-linkedin](https://www.linkedin.com/in/sneha-das-61302227a/)
-- DEV.to: [your-behance](https://dev.to/sneha_2004)
+- LinkedIn: [Sneha Das](https://www.linkedin.com/in/sneha-das-61302227a/)
+- DEV.to: [Sneha_2004](https://dev.to/sneha_2004)
 
 ---
 
