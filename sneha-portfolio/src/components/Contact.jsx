@@ -5,25 +5,14 @@ import { collection, addDoc } from "firebase/firestore";
 import { db, auth } from "../config/firebase";
 import { getIdToken } from "firebase/auth";
 
-const Contact = ({ onSubmit }) => {
+const Contact = () => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
-    company: "",
-    project: "",
-    budget: "",
     message: "",
   });
-  const [focusedField, setFocusedField] = useState(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState(null);
-
-  const budgetOptions = ["Under ₹200", "₹200 - ₹500", "₹500+"];
-  const projectTypes = [
-    "Web Design",
-    "Web Development",
-    "Personalized Websites",
-  ];
 
   const socialLinks = [
     {
@@ -44,22 +33,34 @@ const Contact = ({ onSubmit }) => {
     setSubmitStatus(null);
 
     try {
-      const userToken = await getIdToken(auth.currentUser, true);
+      // Try to get user token if authenticated, otherwise proceed without it
+      let userToken = null;
+      try {
+        if (auth.currentUser) {
+          userToken = await getIdToken(auth.currentUser, true);
+        }
+      } catch (authError) {
+        console.log("No authenticated user, proceeding without token");
+      }
+
       const contactData = {
         ...formData,
         timestamp: new Date(),
         status: "new",
-        userToken,
+        ...(userToken && { userToken }),
       };
 
-      await addDoc(collection(db, "contacts"), contactData);
+      // Try to save to Firestore
+      try {
+        await addDoc(collection(db, "contacts"), contactData);
+      } catch (firestoreError) {
+        console.log("Firestore save failed, continuing with email only");
+      }
 
+      // Send email
       const emailParams = {
         name: formData.name,
         email: formData.email,
-        company: formData.company || "N/A",
-        project: formData.project || "N/A",
-        budget: formData.budget || "N/A",
         message: formData.message,
         time: new Date().toLocaleString(),
         to_email: "sn2005eha26das@gmail.com",
@@ -77,13 +78,9 @@ const Contact = ({ onSubmit }) => {
         setFormData({
           name: "",
           email: "",
-          company: "",
-          project: "",
-          budget: "",
           message: "",
         });
         setIsSubmitting(false);
-        onSubmit && onSubmit();
       }, 2000);
     } catch (error) {
       console.error("Error submitting form:", error);
@@ -105,7 +102,7 @@ const Contact = ({ onSubmit }) => {
         <div className="absolute bottom-1/4 left-1/4 w-32 h-32 bg-black opacity-10 rotate-45" />
       </div>
 
-      <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
+      <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10 pt-20">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -113,7 +110,7 @@ const Contact = ({ onSubmit }) => {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <motion.h2
+          <motion.h1
             initial={{ opacity: 0, scale: 0.8 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
@@ -121,7 +118,7 @@ const Contact = ({ onSubmit }) => {
             className="text-6xl lg:text-8xl font-brogetta text-black mb-8"
           >
             LET'S CREATE
-          </motion.h2>
+          </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -232,52 +229,48 @@ const Contact = ({ onSubmit }) => {
               </motion.div>
             )}
 
-            <div className="space-y-6">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <motion.div
-                  variants={inputVariants}
-                  initial="initial"
-                  animate="animate"
-                  whileFocus="focus"
-                  transition={{ delay: 0.1 }}
-                >
-                  <label className="block text-sm font-mirage text-gray-700 mb-2">
-                    Name *
-                  </label>
-                  <input
-                    type="text"
-                    name="name"
-                    value={formData.name}
-                    onChange={handleInputChange}
-                    onFocus={() => setFocusedField("name")}
-                    onBlur={() => setFocusedField(null)}
-                    required
-                    className="w-full px-4 py-3 border border-gray-300 focus:border-black focus:outline-none transition-colors duration-300 font-mirage"
-                    placeholder="Your full name"
-                  />
-                </motion.div>
-                <motion.div
-                  variants={inputVariants}
-                  initial="initial"
-                  animate="animate"
-                  transition={{ delay: 0.2 }}
-                >
-                  <label className="block text-sm font-mirage text-gray-700 mb-2">
-                    Email *
-                  </label>
-                  <input
-                    type="email"
-                    name="email"
-                    value={formData.email}
-                    onChange={handleInputChange}
-                    onFocus={() => setFocusedField("email")}
-                    onBlur={() => setFocusedField(null)}
-                    required
-                    className="w-full px-4 py-3 border border-gray-300 focus:border-black focus:outline-none transition-colors duration-300 font-mirage"
-                    placeholder="your.email@domain.com"
-                  />
-                </motion.div>
-              </div>
+            <form onSubmit={handleSubmit} className="space-y-6">
+              <motion.div
+                variants={inputVariants}
+                initial="initial"
+                animate="animate"
+                whileFocus="focus"
+                transition={{ delay: 0.1 }}
+              >
+                <label className="block text-sm font-mirage text-gray-700 mb-2">
+                  Name *
+                </label>
+                <input
+                  type="text"
+                  name="name"
+                  value={formData.name}
+                  onChange={handleInputChange}
+                  required
+                  className="w-full px-4 py-3 border border-gray-300 focus:border-black focus:outline-none transition-colors duration-300 font-mirage"
+                  placeholder="Your full name"
+                />
+              </motion.div>
+
+              <motion.div
+                variants={inputVariants}
+                initial="initial"
+                animate="animate"
+                transition={{ delay: 0.2 }}
+              >
+                <label className="block text-sm font-mirage text-gray-700 mb-2">
+                  Email *
+                </label>
+                <input
+                  type="email"
+                  name="email"
+                  value={formData.email}
+                  onChange={handleInputChange}
+                  required
+                  className="w-full px-4 py-3 border border-gray-300 focus:border-black focus:outline-none transition-colors duration-300 font-mirage"
+                  placeholder="your.email@domain.com"
+                />
+              </motion.div>
+
               <motion.div
                 variants={inputVariants}
                 initial="initial"
@@ -285,103 +278,28 @@ const Contact = ({ onSubmit }) => {
                 transition={{ delay: 0.3 }}
               >
                 <label className="block text-sm font-mirage text-gray-700 mb-2">
-                  Company
-                </label>
-                <input
-                  type="text"
-                  name="company"
-                  value={formData.company}
-                  onChange={handleInputChange}
-                  onFocus={() => setFocusedField("company")}
-                  onBlur={() => setFocusedField(null)}
-                  className="w-full px-4 py-3 border border-gray-300 focus:border-black focus:outline-none transition-colors duration-300 font-mirage"
-                  placeholder="Your company name"
-                />
-              </motion.div>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <motion.div
-                  variants={inputVariants}
-                  initial="initial"
-                  animate="animate"
-                  transition={{ delay: 0.4 }}
-                >
-                  <label className="block text-sm font-mirage text-gray-700 mb-2">
-                    Project Type *
-                  </label>
-                  <select
-                    name="project"
-                    value={formData.project}
-                    onChange={handleInputChange}
-                    onFocus={() => setFocusedField("project")}
-                    onBlur={() => setFocusedField(null)}
-                    required
-                    className="w-full px-4 py-3 border border-gray-300 focus:border-black focus:outline-none transition-colors duration-300 font-mirage appearance-none bg-white"
-                  >
-                    <option value="">Select project type</option>
-                    {projectTypes.map((type) => (
-                      <option key={type} value={type}>
-                        {type}
-                      </option>
-                    ))}
-                  </select>
-                </motion.div>
-                <motion.div
-                  variants={inputVariants}
-                  initial="initial"
-                  animate="animate"
-                  transition={{ delay: 0.5 }}
-                >
-                  <label className="block text-sm font-mirage text-gray-700 mb-2">
-                    Budget Range
-                  </label>
-                  <select
-                    name="budget"
-                    value={formData.budget}
-                    onChange={handleInputChange}
-                    onFocus={() => setFocusedField("budget")}
-                    onBlur={() => setFocusedField(null)}
-                    className="w-full px-4 py-3 border border-gray-300 focus:border-black focus:outline-none transition-colors duration-300 font-mirage appearance-none bg-white"
-                  >
-                    <option value="">Select budget range</option>
-                    {budgetOptions.map((budget) => (
-                      <option key={budget} value={budget}>
-                        {budget}
-                      </option>
-                    ))}
-                  </select>
-                </motion.div>
-              </div>
-              <motion.div
-                variants={inputVariants}
-                initial="initial"
-                animate="animate"
-                transition={{ delay: 0.6 }}
-              >
-                <label className="block text-sm font-mirage text-gray-700 mb-2">
-                  Project Details *
+                  Your Message *
                 </label>
                 <textarea
                   name="message"
                   value={formData.message}
                   onChange={handleInputChange}
-                  onFocus={() => setFocusedField("message")}
-                  onBlur={() => setFocusedField(null)}
                   required
                   rows="6"
                   className="w-full px-4 py-3 border border-gray-300 focus:border-black focus:outline-none transition-colors duration-300 font-mirage resize-vertical"
-                  placeholder="Tell me about your project, goals, timeline, and any specific requirements..."
+                  placeholder="Tell me about your project, ideas, or just say hello..."
                 />
               </motion.div>
+
               <motion.div
                 variants={inputVariants}
                 initial="initial"
                 animate="animate"
-                transition={{ delay: 0.7 }}
+                transition={{ delay: 0.4 }}
                 className="pt-4"
               >
                 <motion.button
-                  type="button"
-                  onClick={handleSubmit}
+                  type="submit"
                   disabled={isSubmitting}
                   whileHover={{ scale: isSubmitting ? 1 : 1.05 }}
                   whileTap={{ scale: isSubmitting ? 1 : 0.95 }}
@@ -397,15 +315,14 @@ const Contact = ({ onSubmit }) => {
                       <span>SENDING...</span>
                     </div>
                   ) : (
-                    "SEND PROJECT INQUIRY"
+                    "SEND MESSAGE"
                   )}
                 </motion.button>
                 <p className="text-xs font-mirage text-gray-500 mt-3 text-center">
-                  By submitting this form, you agree to our privacy policy and
-                  terms of service.
+                  By submitting this form, you agree to our privacy policy.
                 </p>
               </motion.div>
-            </div>
+            </form>
           </motion.div>
         </div>
       </div>

@@ -1,19 +1,23 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+
 import Navbar from "./components/Navbar";
-import Hero from "./components/Hero";
+import LandingScreen from "./components/LandingScreen";
+import Home from "./components/Home";
 import About from "./components/About";
-import Works from "./components/Works";
-import Services from "./components/Services";
+import Projects from "./components/Projects";
+import Achievements from "./components/Achievements";
+import Certifications from "./components/Certifications";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import LoadingScreen from "./components/LoadingScreen";
-import ThankYou from "./components/ThankYou";
 import Blog from "./pages/Blog";
 import BlogPost from "./pages/BlogPost";
 import ErrorPage from "./pages/ErrorPage";
-import { Analytics } from '@vercel/analytics/react';
+import ThankYou from "./components/ThankYou";
+
+import { Analytics } from "@vercel/analytics/react";
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -26,6 +30,7 @@ function App() {
   }, []);
 
   const handleContactSubmit = () => setShowThankYou(true);
+
   const handleBackToHome = () => {
     setShowThankYou(false);
     window.scrollTo({ top: 0, behavior: "smooth" });
@@ -35,11 +40,9 @@ function App() {
     <>
       <Router>
         <AnimatePresence mode="wait">
-          {isLoading && <LoadingScreen key="loading" />}
-        </AnimatePresence>
-
-        <AnimatePresence mode="wait">
-          {showThankYou ? (
+          {isLoading ? (
+            <LoadingScreen key="loading" />
+          ) : showThankYou ? (
             <ThankYou key="thankyou" onBackToHome={handleBackToHome} />
           ) : (
             <motion.div
@@ -52,27 +55,15 @@ function App() {
               <Navbar />
               <main>
                 <Routes>
+                  <Route path="/" element={<LandingScreen />} />
+                  <Route path="/home" element={<Home />} />
+                  <Route path="/about" element={<About />} />
+                  <Route path="/projects" element={<Projects />} />
+                  <Route path="/achievements" element={<Achievements />} />
+                  <Route path="/certifications" element={<Certifications />} />
                   <Route
-                    path="/"
-                    element={
-                      <>
-                        <section id="home">
-                          <Hero />
-                        </section>
-                        <section id="about">
-                          <About />
-                        </section>
-                        <section id="works">
-                          <Works />
-                        </section>
-                        <section id="services">
-                          <Services />
-                        </section>
-                        <section id="contact">
-                          <Contact onSubmit={handleContactSubmit} />
-                        </section>
-                      </>
-                    }
+                    path="/contact"
+                    element={<Contact onSubmit={handleContactSubmit} />}
                   />
                   <Route path="/blog" element={<Blog />} />
                   <Route path="/blog/:postId" element={<BlogPost />} />
@@ -90,4 +81,3 @@ function App() {
 }
 
 export default App;
-

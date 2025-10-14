@@ -1,52 +1,38 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { useNavigate, useLocation } from 'react-router-dom';
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
-  const [activeSection, setActiveSection] = useState('home');
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const navigate = useNavigate();
+  const location = useLocation();
 
   const navItems = [
-    { id: 'home', label: 'HOME' },
-    { id: 'about', label: 'ABOUT ME' },
-    { id: 'works', label: 'WORKS' },
-    { id: 'services', label: 'SERVICES' },
-    { id: 'contact', label: 'CONNECT' }
+    { id: 'home', label: 'HOME', path: '/home' },
+    { id: 'about', label: 'ABOUT', path: '/about' },
+    { id: 'projects', label: 'PROJECTS', path: '/projects' },
+    { id: 'achievements', label: 'ACHIEVEMENTS', path: '/achievements' },
+    { id: 'certifications', label: 'CERTIFICATIONS', path: '/certifications' },
+    { id: 'contact', label: 'CONTACT', path: '/contact' }
   ];
 
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
-      
-      const sections = navItems.map(item => item.id);
-      const scrollPosition = window.scrollY + 100;
-
-      for (const section of sections) {
-        const element = document.getElementById(section);
-        if (element) {
-          const { offsetTop, offsetHeight } = element;
-          if (scrollPosition >= offsetTop && scrollPosition < offsetTop + offsetHeight) {
-            setActiveSection(section);
-            break;
-          }
-        }
-      }
     };
 
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const scrollToSection = (sectionId) => {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      const offsetTop = element.offsetTop - 80;
-      window.scrollTo({
-        top: offsetTop,
-        behavior: 'smooth'
-      });
-    }
+  const navigateToPage = (path) => {
+    navigate(path);
     setIsMobileMenuOpen(false);
+  };
+
+  const isActivePage = (path) => {
+    return location.pathname === path;
   };
 
   return (
@@ -65,7 +51,7 @@ const Navbar = () => {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             className="cursor-pointer flex items-center space-x-3"
-            onClick={() => scrollToSection('home')}
+            onClick={() => navigateToPage('/')}
           >
             <img
               src="/logo.png"
@@ -78,13 +64,13 @@ const Navbar = () => {
           </motion.div>
 
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center space-x-8">
+          <div className="hidden lg:flex items-center space-x-6">
             {navItems.map((item) => (
               <motion.button
                 key={item.id}
-                onClick={() => scrollToSection(item.id)}
+                onClick={() => navigateToPage(item.path)}
                 className={`relative px-4 py-2 text-sm font-mirage transition-colors duration-300 ${
-                  activeSection === item.id
+                  isActivePage(item.path)
                     ? 'text-black'
                     : 'text-gray-600 hover:text-black'
                 }`}
@@ -92,7 +78,7 @@ const Navbar = () => {
                 whileTap={{ scale: 0.95 }}
               >
                 [ {item.label} ]
-                {activeSection === item.id && (
+                {isActivePage(item.path) && (
                   <motion.div
                     layoutId="activeTab"
                     className="absolute bottom-0 left-0 right-0 h-0.5 bg-black"
@@ -102,16 +88,6 @@ const Navbar = () => {
                 )}
               </motion.button>
             ))}
-
-            {/* Contact CTA */}
-            <motion.button
-              onClick={() => scrollToSection('contact')}
-              className="px-6 py-2 bg-black text-white font-mirage text-sm border border-black transition-all duration-300 hover:bg-white hover:text-black"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              CONTACT ME ↗
-            </motion.button>
           </div>
 
           {/* Mobile Menu Button */}
@@ -155,12 +131,12 @@ const Navbar = () => {
                 {navItems.map((item, index) => (
                   <motion.button
                     key={item.id}
-                    onClick={() => scrollToSection(item.id)}
+                    onClick={() => navigateToPage(item.path)}
                     initial={{ x: -20, opacity: 0 }}
                     animate={{ x: 0, opacity: 1 }}
                     transition={{ delay: index * 0.1 }}
                     className={`block w-full text-left py-3 px-4 text-lg font-mirage transition-colors ${
-                      activeSection === item.id
+                      isActivePage(item.path)
                         ? 'text-black bg-gray-50'
                         : 'text-gray-600 hover:text-black hover:bg-gray-50'
                     }`}
@@ -168,16 +144,6 @@ const Navbar = () => {
                     [ {item.label} ]
                   </motion.button>
                 ))}
-
-                <motion.button
-                  onClick={() => scrollToSection('contact')}
-                  initial={{ x: -20, opacity: 0 }}
-                  animate={{ x: 0, opacity: 1 }}
-                  transition={{ delay: navItems.length * 0.1 }}
-                  className="w-full mt-4 px-6 py-3 bg-black text-white font-mirage text-sm border border-black transition-all duration-300 hover:bg-white hover:text-black"
-                >
-                  CONTACT ME ↗
-                </motion.button>
               </div>
             </motion.div>
           )}

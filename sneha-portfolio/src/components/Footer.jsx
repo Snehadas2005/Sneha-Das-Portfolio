@@ -1,30 +1,10 @@
 import { motion } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 
 const Footer = () => {
-  const socialLinks = [
-    { id: 1, label: "DEV.TO", url: "https://dev.to/sneha_2004", icon: "(1)" },
-    {
-      id: 2,
-      label: "LINKEDIN",
-      url: "https://www.linkedin.com/in/sneha-das-61302227a/",
-      icon: "(2)",
-    },
-    {
-      id: 3,
-      label: "GITHUB",
-      url: "https://github.com/Snehadas2005",
-      icon: "(3)",
-    },
-    {
-      id: 4,
-      label: "RESUME",
-      url: "https://drive.google.com/drive/folders/1CYN2bZre-t4SKTt_3CF3yXz4EkHofuMi?usp=drive_link",
-      icon: "(4)",
-    },
-  ];
-
   const currentYear = new Date().getFullYear();
-
+  const navigate = useNavigate();
+  
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
@@ -96,7 +76,7 @@ const Footer = () => {
             />
           </motion.a>
 
-          {/* Contact Form CTA */}
+          {/* BLog Form CTA */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -112,49 +92,12 @@ const Footer = () => {
               }}
               whileTap={{ scale: 0.95 }}
               className="px-8 py-4 border-2 border-white text-white font-mirage text-lg transition-all duration-300"
-              onClick={() => {
-                const contactSection = document.getElementById("contact");
-                if (contactSection) {
-                  contactSection.scrollIntoView({ behavior: "smooth" });
-                }
-              }}
+              onClick={() => navigate("/blog")}
             >
-              SEND A PROJECT INQUIRY
+              DISCOVER MY CREATIVE BLOG
             </motion.button>
           </motion.div>
         </div>
-
-        {/* Social Links Grid */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.5, duration: 0.6 }}
-          className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 mb-12 ml-[300px]"
-        >
-          {socialLinks.map((link, index) => (
-            <motion.a
-              key={link.id}
-              href={link.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.1 * index, duration: 0.6 }}
-              whileHover={{
-                scale: 1.05,
-                backgroundColor: "#ffffff",
-                color: "#000000",
-              }}
-              whileTap={{ scale: 0.95 }}
-              className="text-center py-4 px-2 border border-gray-600 hover:border-white transition-all duration-300 group"
-            >
-              <div className="font-brogetta text-lg mb-1">{link.icon}</div>
-              <div className="font-mirage text-sm">{link.label}</div>
-            </motion.a>
-          ))}
-        </motion.div>
 
         {/* Footer Bottom */}
         <div className="border-t border-gray-800 pt-8">
@@ -216,7 +159,6 @@ const Footer = () => {
           </motion.div>
         </div>
       </div>
-
     </footer>
   );
 };

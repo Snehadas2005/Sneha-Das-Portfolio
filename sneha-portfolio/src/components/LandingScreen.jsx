@@ -1,9 +1,11 @@
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import myPhoto from "../assets/photos/image1.png";
 
-const Hero = () => {
+const LandingScreen = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+  const navigate = useNavigate();
 
   useEffect(() => {
     const updateMousePosition = (e) => {
@@ -13,13 +15,6 @@ const Hero = () => {
     window.addEventListener("mousemove", updateMousePosition);
     return () => window.removeEventListener("mousemove", updateMousePosition);
   }, []);
-
-  const scrollToAbout = () => {
-    const aboutSection = document.getElementById("about");
-    if (aboutSection) {
-      aboutSection.scrollIntoView({ behavior: "smooth" });
-    }
-  };
 
   const letterVariants = {
     initial: { opacity: 0, y: 50, rotateX: -90 },
@@ -102,8 +97,8 @@ const Hero = () => {
             ))}
           </div>
 
-          <div className="text-8xl lg:text-[12rem] xl:text-[15rem] font-brogetta leading-none tracking-tight -mt-4">
-            {["D", "E", "S", "I", "G", "N", "E", "R"].map((letter, index) => (
+          <div className="text-8xl lg:text-[10rem] xl:text-[13rem] font-brogetta leading-none tracking-tight -mt-4">
+            {["D", "E", "V","E", "L", "O", "P", "E", "R"].map((letter, index) => (
               <motion.span
                 key={index + 8}
                 variants={letterVariants}
@@ -117,7 +112,7 @@ const Hero = () => {
           </div>
         </motion.div>
 
-        {/* Profile Image Placeholder */}
+        {/* Profile Image */}
         <motion.div
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
@@ -125,7 +120,6 @@ const Hero = () => {
           className="w-64 h-70 mx-auto mb-8 relative"
         >
           <div className="w-full h-full rounded-lg overflow-hidden shadow-lg relative">
-            {/* Image with slight parallax effect */}
             <motion.img
               src={myPhoto}
               alt="Sneha Das"
@@ -164,7 +158,7 @@ const Hero = () => {
           </div>
 
           <div className="flex flex-col lg:flex-row items-center justify-center space-y-2 lg:space-y-0 lg:space-x-8 text-base font-mirage">
-            <span> WEB DESIGN (UX/UI)</span>
+            <span> AI/ML DEVELOPER</span>
             <span> WEB DEVELOPMENT</span>
           </div>
         </motion.div>
@@ -177,7 +171,7 @@ const Hero = () => {
           className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6 mb-20"
         >
           <motion.button
-            onClick={scrollToAbout}
+            onClick={() => navigate('/home')}
             whileHover={{
               scale: 1.05,
               backgroundColor: "#000000",
@@ -186,18 +180,16 @@ const Hero = () => {
             whileTap={{ scale: 0.95 }}
             className="px-8 py-4 border-2 border-black text-black font-mirage transition-all duration-300 hover:shadow-lg"
           >
-            EXPLORE MY WORK
+            EXPLORE
           </motion.button>
 
           <motion.button
-            onClick={() => {
-              window.location.href = '/blog';
-            }}
+            onClick={() => navigate('/contact')}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             className="px-8 py-4 bg-black text-white font-mirage transition-all duration-300 hover:shadow-lg border-2 border-black"
           >
-            CREATIVE JOURNAL
+            GET IN TOUCH
           </motion.button>
         </motion.div>
 
@@ -212,7 +204,7 @@ const Hero = () => {
             animate={{ y: [0, 10, 0] }}
             transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
             className="flex flex-col items-center space-y-2 cursor-pointer"
-            onClick={scrollToAbout}
+            onClick={() => navigate('/home')}
           >
             <span className="text-sm font-mirage text-gray-500 tracking-wider">
               SCROLL
@@ -230,4 +222,4 @@ const Hero = () => {
   );
 };
 
-export default Hero;
+export default LandingScreen;

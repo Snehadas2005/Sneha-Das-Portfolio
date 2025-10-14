@@ -113,7 +113,7 @@ const BlogPost = () => {
   }
 
   return (
-    <div className="min-h-screen bg-white px-6 py-12 max-w-4xl mx-auto">
+    <div className="min-h-screen bg-white px-6 py-12 max-w-4xl mx-auto mt-20">
       {/* Post Header */}
       <h1 className="text-4xl font-brogetta text-black mb-4">{post.title}</h1>
       <p className="text-gray-500 font-mirage mb-6">{formatDate(post.date)}</p>
