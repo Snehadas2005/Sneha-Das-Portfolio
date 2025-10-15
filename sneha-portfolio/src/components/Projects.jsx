@@ -18,15 +18,15 @@ const Projects = () => {
     },
     {
       id: 2,
-      title: "Queer Station",
-      category: "WEB PLATFORM",
+      title: "NotesVault",
+      category: "WEB APPLICATION",
       year: "2025",
       description:
-        "A safe, inclusive platform built for the queer community with forums, resources, and a vibrant space for sharing and connection.",
-      tags: ["React", "Tailwind", "Firebase"],
-      image: "/images/queer-station.png",
-      live: "https://queerstationdev.netlify.app/",
-      github: "https://github.com/Snehadas2005/QueerStation",
+        "Developed a secure note management system with a Flask backend structured inside the root repository. Implemented standardized configuration, .gitignore, and requirements.txt for maintainability and local setup. Ensured best backend practices without using any AI-assisted code or automation. The backend enables future-ready API integrations for scalable performance and collaboration.",
+      tags: ["Flask", "Python", "Frontend Integration"],
+      image: "/images/notesvault.png",
+      live: "https://opensource-society.github.io/notesvault/main/pages/",
+      github: "https://github.com/Snehadas2005/notesvault",
     },
     {
       id: 3,
@@ -150,8 +150,8 @@ const Projects = () => {
               transition={{ delay: 0.6, duration: 0.6 }}
               className="font-mirage text-gray-600 max-w-md lg:text-right"
             >
-                A blend of design thinking and modern development 
-                — from AI apps to creative digital media.
+              A blend of design thinking and modern development — from AI apps
+              to creative digital media.
             </motion.p>
           </div>
         </motion.div>

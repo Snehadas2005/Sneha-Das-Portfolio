@@ -41,24 +41,24 @@ const Home = () => {
   ];
 
   const projects = [
-{
-  id: 1,
-  title: "AI Prescription Analyzer",
-  category: "AI • MACHINE LEARNING • HEALTHCARE",
-  year: "2025",
-  description:
-    "An AI-powered web application that extracts and interprets data from handwritten medical prescriptions using OCR and NLP models. The system analyzes prescriptions, identifies medicines, and provides instant insights for safer and faster ordering.",
-  tags: ["React", "Python", "TensorFlow", "OCR", "NLP"],
-  image: "/images/PresAnaAI.png",
-  github: "https://github.com/Snehadas2005/SwasthyaSetu"
-},
+    {
+      id: 1,
+      title: "AI Prescription Analyzer",
+      category: "AI • MACHINE LEARNING • HEALTHCARE",
+      year: "2025",
+      description:
+        "An AI-powered web application that extracts and interprets data from handwritten medical prescriptions using OCR and NLP models. The system analyzes prescriptions, identifies medicines, and provides instant insights for safer and faster ordering.",
+      tags: ["React", "Python", "TensorFlow", "OCR", "NLP"],
+      image: "/images/PresAnaAI.png",
+      github: "https://github.com/Snehadas2005/SwasthyaSetu",
+    },
     {
       id: 2,
       title: "Queer Station",
       category: "WEB PLATFORM",
       year: "2025",
       description:
-        "A safe, inclusive platform built for the queer community with forums, resources, and a vibrant space for sharing and connection.",
+        "A safe, inclusive platform built for the queer community with forums, resources, and a vibrant space for sharing and connection. One of the winning projects for DEV community JuneTh celebration 2025.",
       tags: ["React", "Tailwind", "Firebase"],
       image: "/images/queer-station.png",
       live: "https://queerstationdev.netlify.app/",
@@ -79,30 +79,30 @@ const Home = () => {
     },
   ];
 
-  const services = [
+  const focusAreas = [
     {
       id: 1,
       number: "01",
-      title: "CUSTOM WEBSITES",
-      subtitle: "Fulll Stack Development",
+      title: "FULL STACK DEVELOPMENT",
+      subtitle: "Building Scalable Web Apps",
       description:
-        "Bringing ideas to life with clean code and scalable architecture using modern tech stacks.",
+        "Developing responsive and high-performing web applications using React, Node.js, Express, and MongoDB.",
     },
     {
       id: 2,
       number: "02",
-      title: "WEB DESIGN",
-      subtitle: "User-Centered UI/UX",
+      title: "UI/UX DESIGN",
+      subtitle: "Creating Intuitive Experiences",
       description:
-        "Crafting beautiful, intuitive interfaces with a focus on usability, accessibility, and a memorable experience.",
+        "Designing seamless digital experiences with a focus on usability, visual storytelling, and accessibility.",
     },
     {
       id: 3,
       number: "03",
-      title: "AI INTEGRATION",
-      subtitle: "Full-Stack Solutions",
+      title: "AI & MACHINE LEARNING",
+      subtitle: "Bringing Intelligence to the Web",
       description:
-        "Integrating AI and machine learning to create intelligent, adaptive web experiences that engage and delight users.",
+        "Integrating AI features like OCR, Chatbots, and OpenAI APIs to make web apps smarter and more interactive.",
     },
   ];
 
@@ -361,16 +361,16 @@ const Home = () => {
             className="text-center mb-16"
           >
             <h2 className="text-6xl lg:text-8xl font-brogetta text-black mb-6">
-              WHAT I DO
+              AREAS I WORK IN
             </h2>
             <p className="text-xl font-mirage text-gray-600 max-w-3xl mx-auto">
-              I am currently outreaching to help people grow their online
-              website porta.
+              Exploring the intersection of web development, design, and AI —
+              building projects that blend creativity with technology.
             </p>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {services.map((service, index) => (
+            {focusAreas.map((service, index) => (
               <motion.div
                 key={service.id}
                 initial={{ opacity: 0, y: 40 }}
