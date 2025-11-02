@@ -215,7 +215,7 @@ const About = () => {
               transition={{ delay: 0.2, duration: 0.6 }}
               className="text-lg lg:text-xl font-brogetta leading-relaxed text-gray-300 mb-8"
             >
-              I'm a <span className="text-white font-bold">Web Developer</span>{" "}
+              I'm a <span className="text-white font-bold">AI/ML & Web Developer</span>{" "}
               and AI & Data Science student, passionate about crafting clean,
               responsive, and user-focused digital experiences.
             </motion.p>
