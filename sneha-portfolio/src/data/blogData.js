@@ -119,8 +119,21 @@ Rain, music, and a single click — my perfect forever favourite shot.`,
     "title": "Feminine Characters",
     "date": "2024-10-11",
     "description": "A reflection on the strength and elegance of powerful feminine characters like Baroness from Cruella and Miranda Priestly from The Devil Wears Prada — women who command presence, exude confidence, and embody the calm power of true femininity.",
-    "content": " Some characters are just like the cherry blueberry cake; the top is coated with a slightly spicy sugar garnish. Yesterday night watching Cruella again for the 5th time I realized, the Baroness was the villain for sure no doubt about that, but she held more power than Cruella not from the inheritance side… yaya ya that money and the whole empire belonged to Estella aka Cruella but they have you noticed how everyone seems to obey her? Like, when she was reading about herself in the newspaper, the bodyguard was just scared of this mother and back even from sneezing, WOW!! That much power is what she holds. One of the best examples of being the best Feminine character is Miranda Priestly from Devil Wears Prada. Good God! The power she holds is just… beyond words. These two characters seem to steal the show and to be honest, to some extent, girls hated them like why they are being so rude and mean. But my ladies, we know the truth that these characters just behold the art of “Feminity”, yaa I agree Baroness is not someone to be idealised just because of how cruel she was, but ladies don’t you agree that she was the character whom all women look up to also Miranda Priestly. What I find common in them is that, the world is nothing, it’s me around which the world revolves. I am the one who praises myself, it’s me who will take care of myself. I am the only person who knows myself the best. Speaking softly, calmly and slowly. WOW! WOW! It’s the most important part, be polite and be calm, speaking with pauses shows that there is no hurry. It gives power to the words they are saying. I am the main character here. The way they own the place, it’s just that they very well know that my life is mine, and I am in the driver's seat. Just be calm. Have you noticed the scene where the baroness stands still when from the vault the wave of moths comes out, everyone panicked but she stayed calm. Take the example of Miranda Priestly, she very well knew the fact that she was getting replaced but she held back her emotions and stayed calm. It’s what makes them powerful, not to work on emotions but rather be calm and everything will pass on.",
-    "image": "/images/blog/feminine-power.jpg",
+    "content": `Some characters are just like the cherry blueberry cake; the top is coated with a slightly spicy sugar garnish.  
+
+Yesterday night, while watching *Cruella* for the fifth time, I realized something — the Baroness was undoubtedly the villain, but she held more power than Cruella. Not because of inheritance or wealth, but because of her command. Did you notice how everyone seems to obey her? When she was reading about herself in the newspaper, even her bodyguard was terrified to sneeze in her presence — *that* is power.  
+
+One of the best examples of this feminine dominance is Miranda Priestly from *The Devil Wears Prada*. Good God, the power she holds is beyond words. These two women, though often seen as rude or cold, truly embody the art of **femininity**. Yes, the Baroness was cruel, but can we deny that deep down, every woman admires that aura, that control, that grace she carries?  
+
+What I find common between them is simple — *the world doesn’t define them; they define the world.* They are their own praise, their own care, and their own validation.  
+
+Speaking softly, calmly, and slowly — that’s where their real power lies. Their poise, their composure, their deliberate pauses — it all says, “I’m not in a hurry. The world can wait.”  
+
+They are the main characters. They own every room they walk into because they know one simple truth: *My life is mine, and I’m in the driver’s seat.*  
+
+Remember the scene where the Baroness stands still while everyone else panics as the moths fly out of the vault? That calmness — that stillness — is power. Or Miranda, knowing she’s being replaced but holding her emotions back, staying composed, poised.  
+
+That’s what true feminine strength is — not reacting, but *owning*.  `,
     "tags": [
     "writing",
       "feminine-energy",
