@@ -113,4 +113,87 @@ Rain, music, and a single click — my perfect forever favourite shot.`,
       "favourite",
     ],
   },
+  {
+    "id": 6,
+    "type": "writing",
+    "title": "Feminine Characters",
+    "date": "2024-10-11",
+    "description": "A reflection on the strength and elegance of powerful feminine characters like Baroness from Cruella and Miranda Priestly from The Devil Wears Prada — women who command presence, exude confidence, and embody the calm power of true femininity.",
+    "content": " Some characters are just like the cherry blueberry cake; the top is coated with a slightly spicy sugar garnish. Yesterday night watching Cruella again for the 5th time I realized, the Baroness was the villain for sure no doubt about that, but she held more power than Cruella not from the inheritance side… yaya ya that money and the whole empire belonged to Estella aka Cruella but they have you noticed how everyone seems to obey her? Like, when she was reading about herself in the newspaper, the bodyguard was just scared of this mother and back even from sneezing, WOW!! That much power is what she holds. One of the best examples of being the best Feminine character is Miranda Priestly from Devil Wears Prada. Good God! The power she holds is just… beyond words. These two characters seem to steal the show and to be honest, to some extent, girls hated them like why they are being so rude and mean. But my ladies, we know the truth that these characters just behold the art of “Feminity”, yaa I agree Baroness is not someone to be idealised just because of how cruel she was, but ladies don’t you agree that she was the character whom all women look up to also Miranda Priestly. What I find common in them is that, the world is nothing, it’s me around which the world revolves. I am the one who praises myself, it’s me who will take care of myself. I am the only person who knows myself the best. Speaking softly, calmly and slowly. WOW! WOW! It’s the most important part, be polite and be calm, speaking with pauses shows that there is no hurry. It gives power to the words they are saying. I am the main character here. The way they own the place, it’s just that they very well know that my life is mine, and I am in the driver's seat. Just be calm. Have you noticed the scene where the baroness stands still when from the vault the wave of moths comes out, everyone panicked but she stayed calm. Take the example of Miranda Priestly, she very well knew the fact that she was getting replaced but she held back her emotions and stayed calm. It’s what makes them powerful, not to work on emotions but rather be calm and everything will pass on.",
+    "image": "/images/blog/feminine-power.jpg",
+    "tags": [
+    "writing",
+      "feminine-energy",
+      "character-analysis",
+      "cruella",
+      "miranda-priestly",
+      "confidence",
+      "women-in-power"
+    ]
+  }, 
+  {
+    "id": 7,
+    "type": "writing",
+    "title": "A Rainy Day Encounter ☔",
+    "date": "2025-09-20",
+    "description": "A poetic short scene of two souls meeting under the rhythm of rain — where a drenched moment turns into the beginning of something magical.",
+    "content": `"Ugh!! This rain again... now I have to go in this."  
+
+It started to rain heavily.  
+
+She stopped by the café shed.  
+
+"Ahhh!! This is unfair... my dress, NO!! Why am I still here, just to suffer?"  
+
+A slight wind passed her, a movement — someone's arrival made a noise.  
+
+She shifted her gaze... and found him.  
+
+How can someone be so perfect?! His wet hair, that white transparent shirt, and the raindrops dripping... his lips.  
+
+"Did I just meet an angel?"  
+
+"Huh? Sorry?"  
+
+"Ahh no no, nothing nothing."  
+
+Those blue eyes... are driving me crazy!  
+
+His blue eyes were now lost in the ocean of brown dunes.  
+
+She is beautiful, indeed an art of God.  
+
+Now,  
+
+The cold heart starts to beat fast, the child finds her right home.  
+
+The clock keeps moving, minutes pass.  
+
+The café door opened.  
+
+She blushed, and he smiled.  
+
+She tucked her hair; he huffed his.  
+
+"Hmm, Hi."  
+
+"H... Hi."  
+
+A love story started.  
+
+~ **Sneha Das**  
+
+---
+
+Will come with a few amazing posts soon!! `,
+    "image": "/images/blog/rainy-meet-cafe.jpg",
+    "tags": [
+      "romance",
+      "rain",
+      "short-story",
+      "poetic",
+      "love",
+      "aesthetic"
+    ]
+  }
 ];
