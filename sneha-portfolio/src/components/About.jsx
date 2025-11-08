@@ -4,40 +4,6 @@ import myPhoto from "../assets/photos/image3.png";
 
 const About = () => {
   const [hoveredLetter, setHoveredLetter] = useState(null);
-
-  const letterMeanings = [
-    {
-      letter: "S",
-      title: "Smart & Strategic",
-      description:
-        "I approach every project with analytical thinking and strategic planning, ensuring solutions that are both innovative and practical.",
-    },
-    {
-      letter: "N",
-      title: "Nurturing Innovator",
-      description:
-        "I believe in fostering creativity and innovation while nurturing ideas from conception to completion with care and attention.",
-    },
-    {
-      letter: "E",
-      title: "Evolving Engineer",
-      description:
-        "Constantly learning and adapting to new technologies, I engineer solutions that evolve with the changing digital landscape.",
-    },
-    {
-      letter: "H",
-      title: "High-Achiever",
-      description:
-        "Driven by excellence, I set high standards for myself and consistently deliver work that exceeds expectations.",
-    },
-    {
-      letter: "A",
-      title: "Ambitious Architect",
-      description:
-        "I architect digital experiences with ambition and vision, building foundations for lasting impact in the digital world.",
-    },
-  ];
-
   const skills = [
     {
       category: "Frontend",
@@ -47,18 +13,12 @@ const About = () => {
         "HTML5",
         "CSS3",
         "Tailwind CSS",
-        "Framer Motion"
+        "Framer Motion",
       ],
     },
     {
       category: "Backend",
-      items: [
-        "Node.js",
-        "Firebase",
-        "Go",
-        "MongoDB",
-        "MySQL"
-      ],
+      items: ["Node.js", "Firebase", "Go", "MongoDB", "MySQL"],
     },
     {
       category: "AI / ML",
@@ -69,7 +29,7 @@ const About = () => {
         "Scikit-learn",
         "Pandas",
         "NumPy",
-        "Matplotlib"
+        "Matplotlib",
       ],
     },
     {
@@ -82,7 +42,7 @@ const About = () => {
         "Three.js",
         "VS Code",
         "Postman",
-        "UI/UX Design"
+        "UI/UX Design",
       ],
     },
   ];
@@ -215,7 +175,10 @@ const About = () => {
               transition={{ delay: 0.2, duration: 0.6 }}
               className="text-lg lg:text-xl font-brogetta leading-relaxed text-gray-300 mb-8"
             >
-              I'm a <span className="text-white font-bold">AI/ML & Web Developer</span>{" "}
+              I'm a{" "}
+              <span className="text-white font-bold">
+                AI/ML & Web Developer
+              </span>{" "}
               and AI & Data Science student, passionate about crafting clean,
               responsive, and user-focused digital experiences.
             </motion.p>
@@ -301,58 +264,17 @@ const About = () => {
             ))}
           </div>
         </motion.div>
-
-        {/* Name Expansion Section */}
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="border-t border-gray-800 pt-20"
+        {/* Resume Button */}
+        <motion.button
+          onClick={() =>
+            window.open("https://sneha-das-resume.netlify.app/", "_blank")
+          }
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+          className="px-8 py-4 bg-transparent border border-black text-white font-mirage transition-all duration-300 hover:bg-black hover:text-white hover:shadow-lg"
         >
-          <div className="text-center mb-12">
-            <h3 className="text-3xl font-brogetta mb-4">WHAT MY NAME MEANS</h3>
-            <p className="font-mirage text-gray-400">
-              Each letter represents a core value that drives my work
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-5 gap-8">
-            {letterMeanings.map((item, index) => (
-              <motion.div
-                key={item.letter}
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.1, duration: 0.6 }}
-                onMouseEnter={() => setHoveredLetter(item.letter)}
-                onMouseLeave={() => setHoveredLetter(null)}
-                className="text-center group cursor-pointer"
-              >
-                <motion.div
-                  whileHover={{ scale: 1.1, rotate: 5 }}
-                  className="text-6xl lg:text-8xl font-brogetta mb-4 transition-colors duration-300 group-hover:text-gray-300"
-                >
-                  {item.letter}
-                </motion.div>
-
-                <motion.div
-                  initial={{ opacity: 0, height: 0 }}
-                  animate={{
-                    opacity: hoveredLetter === item.letter ? 1 : 0,
-                    height: hoveredLetter === item.letter ? "auto" : 0,
-                  }}
-                  className="overflow-hidden"
-                >
-                  <h4 className="font-brogetta text-lg mb-2 text-white">
-                    {item.title}
-                  </h4>
-                  <p className="font-mirage text-sm text-gray-400 leading-relaxed">
-                    {item.description}
-                  </p>
-                </motion.div>
-              </motion.div>
-            ))}
-          </div>
-        </motion.div>
+          VIEW MY RESUME
+        </motion.button>
       </div>
     </div>
   );

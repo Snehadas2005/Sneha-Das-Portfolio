@@ -15,12 +15,10 @@ const Contact = () => {
   const [submitStatus, setSubmitStatus] = useState(null);
 
   const socialLinks = [
-    {
-      name: "LinkedIn",
-      url: "https://www.linkedin.com/in/sneha-das-61302227a/",
-    },
+    {name: "LinkedIn", url: "https://www.linkedin.com/in/sneha-das-61302227a/"},
     { name: "GitHub", url: "https://github.com/Snehadas2005" },
     { name: "Dev.to", url: "https://dev.to/sneha_2004" },
+    { name: "Resume", url: "https://sneha-das-resume.netlify.app/" },
   ];
 
   const handleInputChange = (e) => {
@@ -33,7 +31,6 @@ const Contact = () => {
     setSubmitStatus(null);
 
     try {
-      // Try to get user token if authenticated, otherwise proceed without it
       let userToken = null;
       try {
         if (auth.currentUser) {
@@ -50,14 +47,12 @@ const Contact = () => {
         ...(userToken && { userToken }),
       };
 
-      // Try to save to Firestore
       try {
         await addDoc(collection(db, "contacts"), contactData);
       } catch (firestoreError) {
         console.log("Firestore save failed, continuing with email only");
       }
 
-      // Send email
       const emailParams = {
         name: formData.name,
         email: formData.email,
