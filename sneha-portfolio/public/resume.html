@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sneha Das Resume</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #ffffff;
+            padding: 60px 80px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        #header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        #header h1 {
+            font-size: 48px;
+            font-weight: 300;
+            letter-spacing: 12px;
+            margin-bottom: 20px;
+        }
+        
+        #header h1 span {
+            font-weight: 600;
+        }
+        
+        #header hr {
+            border: none;
+            border-top: 1px solid #000;
+            margin: 20px 0;
+        }
+        
+        #header p {
+            font-size: 14px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+        
+        main {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 60px;
+            margin-top: 40px;
+        }
+        
+        h2 {
+            font-size: 16px;
+            font-weight: 400;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+        
+        section {
+            margin-bottom: 40px;
+        }
+        
+        #mainLeft section p,
+        #mainLeft section ul li {
+            font-size: 13px;
+            line-height: 1.8;
+            color: #000;
+        }
+        
+        #mainLeft ul {
+            list-style: none;
+        }
+        
+        #mainLeft ul li {
+            margin-bottom: 5px;
+        }
+        
+        #mainRight p {
+            font-size: 13px;
+            line-height: 1.8;
+            color: #000;
+            margin-bottom: 15px;
+        }
+        
+        .job-title {
+            font-weight: 600;
+            font-size: 14px;
+            margin-top: 25px;
+            margin-bottom: 5px;
+        }
+        
+        .job-date {
+            font-size: 12px;
+            color: #666;
+            margin-bottom: 10px;
+        }
+        
+        #mainRight ul {
+            list-style: disc;
+            padding-left: 20px;
+            margin-bottom: 15px;
+        }
+        
+        #mainRight ul li {
+            font-size: 13px;
+            line-height: 1.8;
+            margin-bottom: 5px;
+        }
+        
+        .skill-category {
+            font-weight: 600;
+            font-size: 13px;
+            margin-top: 15px;
+            margin-bottom: 5px;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 8px;
+            font-size: 13px;
+        }
+        
+        .icon {
+            width: 16px;
+        }
+    </style>
+</head>
+<body>
+    <header id="header">
+        <h1><span>SNEHA</span> DAS</h1>
+        <hr>
+        <p>B.TECH CSE - ARTIFICIAL INTELLIGENCE & DATA SCIENCE</p>
+        <hr>
+    </header>
+    <main>
+        <article id="mainLeft">
+            <section>
+                <h2>CONTACT</h2>
+                <div class="contact-item">sn2005eha26das@gmail.com</div>
+                <div class="contact-item">Snehadas2005</div>
+                <div class="contact-item">linkedin.com/in/sneha-das-61302227a</div>
+            </section>
+            
+            <section>
+                <h2>SKILLS</h2>
+                <p>React.js, JavaScript, TypeScript, HTML5, CSS3, Tailwind CSS, Bootstrap, GSAP, Three.js, Firebase, Flask, Python, Java, Git, Figma</p>
+            </section>
+            
+            <section>
+                <h2>EDUCATION</h2>
+                <p class="skill-category">B.Tech AI & Data Science</p>
+                <p>Galgotias University</p>
+                <p>October 2023 - Present</p>
+            </section>
+        </article>
+        
+        <article id="mainRight">
+            <section>
+                <h2>ABOUT</h2>
+                <p>B.Tech CSE student specializing in AI and Data Science with expertise in React.js, Firebase, and modern web development. Contributed to 10+ open-source projects including 6+ under GirlScript Summer of Code. Winner of DEV Community June Frontend Challenge with "The Queer Station" platform.</p>
+            </section>
+            
+            <section>
+                <h2>PROJECTS</h2>
+                
+                <p class="job-title">AI PRESCRIPTION & SYMPTOMS TRACKER</p>
+                <p class="job-date">Ongoing Project</p>
+                <p>Developing intelligent healthcare application with OCR-based prescription analysis and AI-powered symptom tracking using Tesseract, PyTorch, spaCy, and React.</p>
+                <ul>
+                    <li>Implementing ML models for symptom pattern recognition and health insights</li>
+                    <li>Building NLP capabilities for medical text processing and entity extraction</li>
+                    <li>Creating responsive React frontend for seamless data visualization</li>
+                </ul>
+                
+                <p class="job-title">FRONTEND DEVELOPER & LEAD</p>
+                <p class="job-date">PRO-TECH-TOR Safety App | October 2024</p>
+                <p>Led 5-member team at Smart India Hackathon 2024 to build real-time women's safety application with sub-2-second emergency alert system using OpenCV, Flet, and Socket Programming.</p>
+                <ul>
+                    <li>Integrated GPS tracking, live video capture, and emergency contact alerts</li>
+                    <li>Delivered intuitive frontend UX recognized at national hackathon</li>
+                </ul>
+                
+                <p class="job-title">OPEN-SOURCE CONTRIBUTOR</p>
+                <p class="job-date">GirlScript Summer of Code | June 2025 - July 2025</p>
+                <p>Developed scalable frontend components and integrated backend APIs across 6+ projects using React, TypeScript, Firebase, and Tailwind CSS.</p>
+                <ul>
+                    <li>Implemented profile management modules improving workflow efficiency by 30%</li>
+                    <li>Integrated Gemini chatbot and real-time features enhancing user engagement</li>
+                </ul>
+                
+                <p class="job-title">FRONTEND DEVELOPER</p>
+                <p class="job-date">QueerStation Platform | June 2025</p>
+                <p>Built award-winning real-time story-sharing platform using JavaScript and Firebase, winner of DEV Community Frontend Challenge.</p>
+                <ul>
+                    <li>Achieved 50+ visitors with 25% story submission rate</li>
+                    <li>Integrated EmailJS for secure real-time communication</li>
+                </ul>
+            </section>
+        </article>
+    </main>
+</body>
+</html>
