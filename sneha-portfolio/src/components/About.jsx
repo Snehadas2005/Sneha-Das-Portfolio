@@ -265,16 +265,27 @@ const About = () => {
           </div>
         </motion.div>
         {/* Resume Button */}
-        <motion.button
-          onClick={() =>
-            window.open("https://sneha-das-resume.netlify.app/", "_blank")
-          }
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
-          className="px-8 py-4 bg-transparent border border-black text-white font-mirage transition-all duration-300 hover:bg-black hover:text-white hover:shadow-lg"
-        >
-          VIEW MY RESUME
-        </motion.button>
+        <motion.div className="flex justify-center">
+          <motion.button
+            onClick={() =>
+              window.open("https://sneha-das-resume.netlify.app/", "_blank")
+            }
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            className="relative px-12 py-4 bg-white text-black font-brogetta text-lg tracking-wider overflow-hidden group"
+          >
+            <motion.div
+              className="absolute inset-0 bg-gradient-to-r from-gray-800 via-gray-600 to-gray-800"
+              initial={{ x: "-100%" }}
+              whileHover={{ x: "0%" }}
+              transition={{ duration: 0.4, ease: "easeInOut" }}
+            />
+            
+            <span className="relative z-10 group-hover:text-black transition-colors duration-300">
+              VIEW MY RESUME
+            </span>
+          </motion.button>
+        </motion.div>
       </div>
     </div>
   );
