@@ -129,6 +129,7 @@ const Projects = () => {
       tags: ["AI", "Cybersecurity", "Firebase", "Next.js", "Gemini API"],
       image: "/images/SentraSec.png",
       live: "https://sec-sentra-ai-frontend.vercel.app/",
+      github: "https://github.com/Snehadas2005/devfest-security-suite"
     },
   ];
 
