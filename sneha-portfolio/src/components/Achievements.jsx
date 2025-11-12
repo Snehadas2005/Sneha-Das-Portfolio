@@ -4,6 +4,16 @@ const Achievements = () => {
   const achievements = [
     {
       id: 1,
+      title: "Build-a-thon 2nd runner up",
+      organization: "Google Developer Groups Noida",
+      date: "2025",
+      description:
+        "Secured 2nd Runner-Up position at Built-A-Thon 2025, organized by Google Developer Group Noida (GDG Noida) during DevFest 2025 for developing SentraSec AI — an AI-powered cybersecurity platform that democratizes enterprise-grade security for all.",
+      category: "Achievement",
+      icon: "🏆",
+    },
+    {
+      id: 2,
       title: "Active Member - GDG",
       organization: "Google Developer Groups, Galgotias University",
       date: "2025",
@@ -13,7 +23,7 @@ const Achievements = () => {
       icon: "💬",
     },
     {
-      id: 2,
+      id: 3,
       title: "GSSOC '25 Open Source Contributor",
       organization: "GirlScript Summer of Code",
       date: "2025",
@@ -23,7 +33,7 @@ const Achievements = () => {
       icon: "🌟",
     },
     {
-      id: 3,
+      id: 4,
       title: "Volunteer - NayePankh Foundation",
       organization: "NayePankh Foundation",
       date: "2025",
@@ -33,7 +43,7 @@ const Achievements = () => {
       icon: "🌿",
     },
     {
-      id: 4,
+      id: 5,
       title: "Winner - Frontend JuneTh Challenge",
       organization: "Dev Community",
       date: "2025",
@@ -43,7 +53,7 @@ const Achievements = () => {
       icon: "🏆",
     },
     {
-      id: 5,
+      id: 6,
       title: "Team Leader - SIH Pre-Qualified Project",
       organization: "Smart India Hackathon",
       date: "2024",
@@ -53,7 +63,7 @@ const Achievements = () => {
       icon: "🚀",
     },
     {
-      id: 6,
+      id: 7,
       title: "Secretary - Rotary Club of BMVB ASMA",
       organization: "Rotary International",
       date: "2021",
