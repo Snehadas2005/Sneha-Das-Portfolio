@@ -14,11 +14,11 @@ const Achievements = () => {
     },
     {
       id: 2,
-      title: "Active Member - GDG",
+      title: "Design Lead of GDGoCGU",
       organization: "Google Developer Groups, Galgotias University",
       date: "2025",
       description:
-        "Active member of GDG oC GU, engaging in developer sessions, collaborative projects, and community-led tech events to enhance technical skills and networking. Along with memeber of GDG Cloud New Delhi and GDG New Delhi",
+        "Currently appointed as the lead Designer of Google Developers Groups on Campus Galgotias University, my position gives me the responsibility to look over the overall designs, posts and posters which are to be made according to the event. Along with members of GDG Cloud New Delhi and GDG New Delhi",
       category: "Community",
       icon: "💬",
     },
