@@ -83,7 +83,7 @@ const LandingScreen = () => {
           animate="animate"
           className="mb-8"
         >
-          <div className="text-8xl lg:text-[12rem] xl:text-[15rem] font-brogetta leading-none tracking-tight">
+          <div className="text-5xl sm:text-6xl md:text-8xl lg:text-[12rem] xl:text-[15rem] font-brogetta leading-none tracking-tight">
             {["C", "R", "E", "A", "T", "I", "V", "E"].map((letter, index) => (
               <motion.span
                 key={index}
@@ -97,7 +97,7 @@ const LandingScreen = () => {
             ))}
           </div>
 
-          <div className="text-8xl lg:text-[10rem] xl:text-[13rem] font-brogetta leading-none tracking-tight -mt-4">
+          <div className="text-5xl sm:text-6xl md:text-8xl lg:text-[10rem] xl:text-[13rem] font-brogetta leading-none tracking-tight -mt-4">
             {["D", "E", "V","E", "L", "O", "P", "E", "R"].map((letter, index) => (
               <motion.span
                 key={index + 8}

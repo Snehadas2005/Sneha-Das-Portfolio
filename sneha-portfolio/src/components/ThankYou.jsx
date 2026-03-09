@@ -50,10 +50,10 @@ const ThankYou = ({ onBackToHome }) => {
           transition={{ delay: 0.3, duration: 0.8 }}
           className="mb-8"
         >
-          <h1 className="text-6xl lg:text-8xl font-brogetta text-black mb-4 leading-none">
+          <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-brogetta text-black mb-4 leading-none">
             BIG
           </h1>
-          <h1 className="text-6xl lg:text-8xl font-brogetta text-black leading-none">
+          <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-brogetta text-black leading-none">
             THANKS
           </h1>
           <motion.p

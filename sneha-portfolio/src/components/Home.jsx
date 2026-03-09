@@ -126,7 +126,7 @@ const Home = () => {
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: 0.2, duration: 0.8 }}
-              className="text-6xl lg:text-8xl font-brogetta mb-8"
+              className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-brogetta mb-8 leading-tight px-4"
             >
               HELLO, I'M SNEHA DAS
             </motion.h1>
@@ -219,7 +219,7 @@ const Home = () => {
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
-            <h2 className="text-6xl lg:text-8xl font-brogetta text-black mb-6">
+            <h2 className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-brogetta text-black mb-6">
               WHAT I DO
             </h2>
             <p className="text-xl font-mirage text-gray-600 max-w-3xl mx-auto">
@@ -270,7 +270,7 @@ const Home = () => {
                       <span>•</span>
                       <span>{project.year}</span>
                     </div>
-                    <h3 className="text-3xl lg:text-4xl font-brogetta text-black leading-tight">
+                    <h3 className="text-2xl sm:text-3xl lg:text-4xl font-brogetta text-black leading-tight">
                       {project.title}
                     </h3>
                   </div>
@@ -360,7 +360,7 @@ const Home = () => {
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
-            <h2 className="text-6xl lg:text-8xl font-brogetta text-black mb-6">
+            <h2 className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-brogetta text-black mb-6">
               AREAS I WORK IN
             </h2>
             <p className="text-xl font-mirage text-gray-600 max-w-3xl mx-auto">
@@ -444,7 +444,7 @@ const Home = () => {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-5 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-8">
             {letterMeanings.map((item, index) => (
               <motion.div
                 key={item.letter}
@@ -452,9 +452,10 @@ const Home = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1, duration: 0.6 }}
+                onClick={() => setHoveredLetter(hoveredLetter === item.letter ? null : item.letter)}
                 onMouseEnter={() => setHoveredLetter(item.letter)}
                 onMouseLeave={() => setHoveredLetter(null)}
-                className="text-center group cursor-pointer"
+                className="text-center group cursor-pointer p-4 rounded-lg transition-colors hover:bg-gray-50"
               >
                 <motion.div
                   whileHover={{ scale: 1.1, rotate: 5 }}

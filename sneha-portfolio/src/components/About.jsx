@@ -73,7 +73,7 @@ const About = () => {
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.2, duration: 0.8 }}
-            className="text-6xl lg:text-8xl font-brogetta mb-8"
+            className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-brogetta mb-8 px-4"
           >
             ABOUT ME
           </motion.h1>
@@ -86,9 +86,9 @@ const About = () => {
           transition={{ delay: 0.3, duration: 0.8 }}
           className="text-center mb-20"
         >
-          <div className="max-w-4xl mx-auto">
+          <div className="max-w-4xl mx-auto px-4">
             <motion.h2
-              className="text-4xl lg:text-6xl font-brogetta leading-tight mb-8"
+              className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-brogetta leading-tight mb-8"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.4, duration: 0.8 }}
@@ -96,7 +96,7 @@ const About = () => {
               DESIGN
             </motion.h2>
             <motion.h2
-              className="text-4xl lg:text-6xl font-brogetta leading-tight text-gray-400 mb-8"
+              className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-brogetta leading-tight text-gray-400 mb-8"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.6, duration: 0.8 }}
@@ -104,7 +104,7 @@ const About = () => {
               IS NOT JUST
             </motion.h2>
             <motion.h2
-              className="text-4xl lg:text-6xl font-brogetta leading-tight mb-12"
+              className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-brogetta leading-tight mb-12"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.8, duration: 0.8 }}
@@ -155,7 +155,7 @@ const About = () => {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.3, duration: 0.6 }}
-                  className="text-xl font-brogetta mb-8"
+                  className="text-xl sm:text-2xl font-brogetta mb-8"
                 >
                   I'M SNEHA
                 </motion.h5>

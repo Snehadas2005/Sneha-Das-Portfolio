@@ -155,7 +155,7 @@ const Certifications = () => {
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.2, duration: 0.8 }}
-            className="text-6xl lg:text-8xl font-brogetta text-black mb-8"
+            className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-brogetta text-black mb-8 px-4"
           >
             CERTIFICATIONS
           </motion.h1>

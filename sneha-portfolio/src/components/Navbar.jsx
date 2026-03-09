@@ -58,7 +58,7 @@ const Navbar = () => {
               alt="Sneha Logo"
               className="w-[52px] h-[52px] lg:w-[60px] lg:h-[60px] object-contain"
             />
-            <h1 className="text-2xl lg:text-3xl font-brogetta text-black tracking-tight">
+            <h1 className="text-xl sm:text-2xl lg:text-3xl font-brogetta text-black tracking-tight">
               SNEHA
             </h1>
           </motion.div>

@@ -30,14 +30,14 @@ const Footer = () => {
             transition={{ duration: 0.6 }}
             className="mb-8"
           >
-            <div className="flex items-center justify-center space-x-4 text-6xl lg:text-8xl font-brogetta mb-4">
+            <div className="flex items-center justify-center space-x-2 sm:space-x-4 text-3xl sm:text-4xl md:text-6xl lg:text-8xl font-brogetta mb-4">
               <span>LET'S</span>
               <motion.div
                 whileHover={{ rotate: 360 }}
                 transition={{ duration: 0.5 }}
-                className="w-12 h-12 lg:w-16 lg:h-16 bg-white rounded-full flex items-center justify-center"
+                className="w-8 h-8 sm:w-10 sm:h-10 lg:w-16 lg:h-16 bg-white rounded-full flex items-center justify-center"
               >
-                <span className="text-black text-2xl lg:text-3xl">✉</span>
+                <span className="text-black text-lg sm:text-xl lg:text-3xl">✉</span>
               </motion.div>
               <span>CONNECT</span>
             </div>
