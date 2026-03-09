@@ -108,7 +108,6 @@ const Projects = () => {
       image: "/images/poetry.png",
       live: "https://www.canva.com/design/DAGdA4v-2Jk/_sYxBwrT5KCwEA65M8K65w/edit",
     },
-
     {
       id: 9,
       title: "Kafila Farewell Video",
@@ -119,6 +118,18 @@ const Projects = () => {
       tags: ["Canva", "Video Editing", "Storytelling", "Event Media"],
       image: "/images/video1pic.png",
       live: "https://www.canva.com/design/DAGoaXogMU8/dMK5Jx2m5gqrAq_38SMcrw/watch",
+    },
+  {
+      id: 10,
+      title: "SentraSec AI",
+      category: "AI • CYBERSECURITY • WEB DEVELOPMENT",
+      year: "2025",
+      description:
+        "An AI-powered cybersecurity platform built to democratise enterprise-grade protection. Developed using Gemini AI and Firebase, the platform enables real-time threat detection, risk classification, and security automation for developers and small businesses. Secured 2nd Runner-Up position at Built-A-Thon 2025 by GDG Noida.",
+      tags: ["AI", "Cybersecurity", "Firebase", "Next.js", "Gemini API"],
+      image: "/images/SentraSec.png",
+      live: "https://sec-sentra-ai-frontend.vercel.app/",
+      github: "https://github.com/Snehadas2005/devfest-security-suite"
     },
   ];
 
