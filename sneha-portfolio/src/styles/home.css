@@ -1,0 +1,217 @@
+/* src/styles/home.css */
+
+:root {
+    --font-brogetta: 'BROGETTA-Regular', serif;
+    --font-mirage: 'MADE-Mirage', sans-serif;
+    --color-black: #000000;
+    --color-white: #ffffff;
+    --color-gray-dark: #121212;
+    --color-gray-medium: #4a4a4a;
+    --color-gray-light: #f3f3f3;
+}
+
+/* Base Responsive Typography */
+.text-hero {
+    font-family: var(--font-brogetta);
+    font-size: clamp(2.5rem, 8vw, 6rem);
+    line-height: 1.1;
+}
+
+.text-section-title {
+    font-family: var(--font-brogetta);
+    font-size: clamp(2rem, 6vw, 5rem);
+    line-height: 1.2;
+}
+
+.text-subheading {
+    font-family: var(--font-mirage);
+    font-size: clamp(1rem, 3vw, 1.5rem);
+}
+
+/* Mobile Optimizations */
+@media (max-width: 640px) {
+    .px-mobile-sm {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    .py-mobile-sm {
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+    }
+
+    .text-xs-mobile {
+        font-size: 0.75rem;
+    }
+
+    .nav-blur {
+        backdrop-filter: blur(8px);
+        -webkit-backdrop-filter: blur(8px);
+    }
+}
+
+/* Layout Helpers (Minimal Bootstrap-like) */
+.container-custom {
+    max-width: 1280px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+}
+
+@media (min-width: 1024px) {
+    .container-custom {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+}
+
+/* Component Specific Collective Styles */
+.nav-link-custom {
+    font-family: var(--font-mirage);
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.card-hover-effect:hover {
+    border-color: var(--color-black);
+    transform: translateY(-5px);
+}
+
+.about-image-container {
+    height: 24rem;
+    background-color: #1a1a1a;
+    margin-bottom: 2rem;
+    position: relative;
+    overflow: hidden;
+    border-radius: 0.5rem;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+@media (min-width: 1024px) {
+    .about-image-container {
+        height: 500px;
+    }
+}
+
+/* Animation preserving styles */
+.reveal-on-scroll {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.8s ease-out;
+}
+
+.reveal-on-scroll.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Fixed email overflow for small screens */
+.footer-email {
+    word-break: break-all;
+    font-size: clamp(1.25rem, 5vw, 2.5rem);
+    font-family: var(--font-brogetta);
+}
+
+/* Improved Name Meaning Grid for Mobile */
+.name-meaning-grid {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+
+@media (min-width: 480px) {
+    .name-meaning-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (min-width: 768px) {
+    .name-meaning-grid {
+        grid-template-columns: repeat(5, minmax(0, 1fr));
+    }
+}
+
+/* Button Collective Styles */
+.btn-primary-custom {
+    padding: 1rem 2rem;
+    border: 2px solid var(--color-white);
+    color: var(--color-white);
+    background: transparent;
+    font-family: var(--font-mirage);
+    transition: all 0.3s ease;
+}
+
+.btn-primary-custom:hover {
+    background-color: var(--color-white);
+    color: var(--color-black);
+}
+
+.btn-secondary-custom {
+    padding: 1rem 2rem;
+    background-color: var(--color-white);
+    color: var(--color-black);
+    font-family: var(--font-mirage);
+    transition: all 0.3s ease;
+}
+
+.btn-secondary-custom:hover {
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+/* Bootstrap-like Grid Utilities (Barely) */
+.container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+@media (min-width: 576px) {
+    .container {
+        max-width: 540px;
+    }
+}
+
+@media (min-width: 768px) {
+    .container {
+        max-width: 720px;
+    }
+}
+
+@media (min-width: 992px) {
+    .container {
+        max-width: 960px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1140px;
+    }
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+.col-12 {
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding: 0 15px;
+}
+
+.col-md-6 {
+    padding: 0 15px;
+}
+
+@media (min-width: 768px) {
+    .col-md-6 {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+}

@@ -16,6 +16,7 @@ import Blog from "./pages/Blog";
 import BlogPost from "./pages/BlogPost";
 import ErrorPage from "./pages/ErrorPage";
 import ThankYou from "./components/ThankYou";
+import ScrollToTop from "./components/ScrollToTop";
 
 import { Analytics } from "@vercel/analytics/react";
 
@@ -39,6 +40,7 @@ function App() {
   return (
     <>
       <Router>
+        <ScrollToTop />
         <AnimatePresence mode="wait">
           {isLoading ? (
             <LoadingScreen key="loading" />

@@ -63,20 +63,7 @@ const Home = () => {
       image: "/images/queer-station.png",
       live: "https://queerstationdev.netlify.app/",
       github: "https://github.com/Snehadas2005/QueerStation",
-    },
-    {
-      id: 3,
-      title: "Mental Health Awareness Post",
-      category: "SOCIAL MEDIA DESIGN",
-      year: "2024",
-      description:
-        "Instagram post created for Kafila, focusing on mental health awareness and self-care. Contributed as part of the creative team—collaborated on content and design to promote support and reduce stigma.",
-      tags: ["Canva", "Content Design", "Social Media", "Mental Health"],
-      image: "/images/Kafilawork1.png",
-      live: "https://www.instagram.com/p/DErOxC0yU_D/?img_index=1",
-      github:
-        "https://www.canva.com/design/DAGbz9TBpd0/VuXH5Lnd-A7FS3BehWTfqQ/watch?utm_content=DAGbz9TBpd0&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h801b82ea81",
-    },
+    }
   ];
 
   const focusAreas = [
@@ -126,7 +113,7 @@ const Home = () => {
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: 0.2, duration: 0.8 }}
-              className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-brogetta mb-8 leading-tight px-4"
+              className="text-hero mb-8 px-4"
             >
               HELLO, I'M SNEHA DAS
             </motion.h1>
@@ -146,7 +133,7 @@ const Home = () => {
                 onClick={() => navigate("/projects")}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="px-8 py-4 border-2 border-white text-white font-mirage transition-all duration-300 hover:bg-white hover:text-black"
+                className="btn-primary-custom"
               >
                 VIEW MY WORK
               </motion.button>
@@ -155,7 +142,7 @@ const Home = () => {
                 onClick={() => navigate("/contact")}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="px-8 py-4 bg-white text-black font-mirage transition-all duration-300 hover:shadow-lg"
+                className="btn-secondary-custom"
               >
                 GET IN TOUCH
               </motion.button>
@@ -219,7 +206,7 @@ const Home = () => {
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-brogetta text-black mb-6">
+            <h2 className="text-section-title text-black mb-6">
               WHAT I DO
             </h2>
             <p className="text-xl font-mirage text-gray-600 max-w-3xl mx-auto">
@@ -436,7 +423,7 @@ const Home = () => {
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl lg:text-6xl font-brogetta text-black mb-6">
+            <h2 className="text-section-title text-black mb-6">
               WHAT MY NAME MEANS
             </h2>
             <p className="text-xl font-mirage text-gray-600">
@@ -444,7 +431,7 @@ const Home = () => {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-8">
+          <div className="name-meaning-grid">
             {letterMeanings.map((item, index) => (
               <motion.div
                 key={item.letter}
@@ -459,7 +446,7 @@ const Home = () => {
               >
                 <motion.div
                   whileHover={{ scale: 1.1, rotate: 5 }}
-                  className="text-6xl lg:text-8xl font-brogetta mb-4 transition-colors duration-300 group-hover:text-gray-600"
+                  className="text-5xl lg:text-8xl font-brogetta mb-4 transition-colors duration-300 group-hover:text-gray-600"
                 >
                   {item.letter}
                 </motion.div>

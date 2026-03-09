@@ -72,55 +72,8 @@ const Projects = () => {
       image: "/images/Symptoms.png",
       github: "https://github.com/Snehadas2005/SwasthyaSetu",
     },
-
-    {
-      id: 6,
-      title: "Mental Health Myths & Facts Post",
-      category: "SOCIAL MEDIA DESIGN • AWARENESS CAMPAIGN",
-      year: "2025",
-      description:
-        "Created an Instagram post for Kafila focused on debunking mental health myths and spreading awareness. Collaborated on content design and captions to promote inclusivity and a supportive mental health culture.",
-      tags: ["Canva", "Content Design", "Mental Health", "Awareness Campaign"],
-      image: "/images/myths.png",
-      live: "https://www.instagram.com/p/DEuy3u3Sxq9/",
-    },
-
-    {
-      id: 7,
-      title: "Portfolio Prototype",
-      category: "UI/UX • DESIGN SYSTEM",
-      year: "2025",
-      description:
-        "Developed an interactive portfolio prototype in Figma featuring a rotating showcase effect and clean, minimal layout. Designed for fluid navigation, consistent typography, and modern visual hierarchy.",
-      tags: ["Figma", "Prototyping", "UI/UX Design", "Animation"],
-      image: "/images/figma.png",
-      live: "https://www.figma.com/proto/jWOIKtoTmXwDMXliZmNucc/Portfolio?page-id=0%3A1&node-id=44-498&m=draw",
-    },
-
-    {
-      id: 8,
-      title: "Self-Love Poetry Reel",
-      category: "VIDEO EDITING • SOCIAL MEDIA",
-      year: "2025",
-      description:
-        "Edited and produced Kafila’s Self-Love Poetry reel using Canva, enhancing the visual flow, typography, and pacing to align with the emotional tone of the poetry and campaign theme.",
-      tags: ["Canva", "Video Editing", "Social Media", "Storytelling"],
-      image: "/images/poetry.png",
-      live: "https://www.canva.com/design/DAGdA4v-2Jk/_sYxBwrT5KCwEA65M8K65w/edit",
-    },
-    {
-      id: 9,
-      title: "Kafila Farewell Video",
-      category: "VIDEO EDITING • EVENT PRODUCTION",
-      year: "2025",
-      description:
-        "Fully edited and designed Kafila’s farewell video, combining event highlights, transitions, and emotional storytelling to celebrate the journey of members and the organization’s milestones.",
-      tags: ["Canva", "Video Editing", "Storytelling", "Event Media"],
-      image: "/images/video1pic.png",
-      live: "https://www.canva.com/design/DAGoaXogMU8/dMK5Jx2m5gqrAq_38SMcrw/watch",
-    },
   {
-      id: 10,
+      id: 6,
       title: "SentraSec AI",
       category: "AI • CYBERSECURITY • WEB DEVELOPMENT",
       year: "2025",

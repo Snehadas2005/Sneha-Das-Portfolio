@@ -88,7 +88,7 @@ const About = () => {
         >
           <div className="max-w-4xl mx-auto px-4">
             <motion.h2
-              className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-brogetta leading-tight mb-8"
+              className="text-section-title leading-tight mb-8"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.4, duration: 0.8 }}
@@ -96,7 +96,7 @@ const About = () => {
               DESIGN
             </motion.h2>
             <motion.h2
-              className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-brogetta leading-tight text-gray-400 mb-8"
+              className="text-section-title leading-tight text-gray-400 mb-8"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.6, duration: 0.8 }}
@@ -104,7 +104,7 @@ const About = () => {
               IS NOT JUST
             </motion.h2>
             <motion.h2
-              className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-brogetta leading-tight mb-12"
+              className="text-section-title leading-tight mb-12"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.8, duration: 0.8 }}
@@ -124,7 +124,7 @@ const About = () => {
           >
             <div className="relative">
               {/* Profile Image */}
-              <div className="w-full h-96 lg:h-[500px] bg-gray-800 mb-8 relative overflow-hidden rounded-lg shadow-lg">
+              <div className="about-image-container">
                 <img
                   src={myPhoto}
                   alt="Sneha Das"

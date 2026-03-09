@@ -30,7 +30,7 @@ const Footer = () => {
             transition={{ duration: 0.6 }}
             className="mb-8"
           >
-            <div className="flex items-center justify-center space-x-2 sm:space-x-4 text-3xl sm:text-4xl md:text-6xl lg:text-8xl font-brogetta mb-4">
+            <div className="flex items-center justify-center space-x-2 sm:space-x-4 text-section-title mb-4">
               <span>LET'S</span>
               <motion.div
                 whileHover={{ rotate: 360 }}
@@ -64,7 +64,7 @@ const Footer = () => {
             transition={{ delay: 0.3, duration: 0.6 }}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="inline-block text-2xl lg:text-4xl font-brogetta text-white hover:text-gray-300 transition-colors duration-300 mb-12 group"
+            className="footer-email text-white hover:text-gray-300 transition-colors duration-300 mb-12 group block px-4"
           >
             sn2005eha26das@gmail.com
             <motion.div
